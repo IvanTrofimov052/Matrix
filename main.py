@@ -13,7 +13,6 @@ def derterminant(matrix):
             new_matrix.append([])
             for k in range(0, len(matrix)):
                 if (i + k + 1) % len(matrix) == i:
-                    print("werwt")
                     pass
                 # print(j)
                 else:
@@ -28,7 +27,7 @@ def derterminant(matrix):
         print(matrix[0][i])
         print(derterminant(all_matrix[i]))
         print(np.linalg.det(all_matrix[i]), ' hhh')
-        sum += matrix[0][i] * derterminant(all_matrix[i]) * ((-1)**i)
+        sum += matrix[0][i] * derterminant(all_matrix[i])
         print(sum)
 
     return sum
