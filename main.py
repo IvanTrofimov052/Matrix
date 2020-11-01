@@ -12,11 +12,11 @@ def derterminant(matrix):
         for j in range(1, len(matrix)):
             new_matrix.append([])
             for k in range(0, len(matrix)):
-                if (i + k + 1) % len(matrix) == i:
+                if k == i:
                     pass
                 # print(j)
                 else:
-                    new_matrix[j-1].append(matrix[j][(i + k + 1) % len(matrix)])
+                    new_matrix[j-1].append(matrix[j][k])
 
         all_matrix.append(new_matrix)
 
@@ -27,15 +27,15 @@ def derterminant(matrix):
         print(matrix[0][i])
         print(derterminant(all_matrix[i]))
         print(np.linalg.det(all_matrix[i]), ' hhh')
-        sum += matrix[0][i] * derterminant(all_matrix[i])
+        sum += matrix[0][i] * derterminant(all_matrix[i]) * ((-1)**i)
         print(sum)
 
     return sum
 
 
-
 def inverse(Matrix):
     pass
+
 
 matrix_1 = [[1, 2], [1, 2]]
 matrix = [[1, 2, 3], [0, 4, 5], [1, 0, 6]]
