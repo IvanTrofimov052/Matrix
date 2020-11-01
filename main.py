@@ -23,12 +23,7 @@ def derterminant(matrix):
     sum = 0
 
     for i in range(len(all_matrix)):
-        print(all_matrix[i])
-        print(matrix[0][i])
-        print(derterminant(all_matrix[i]))
-        print(np.linalg.det(all_matrix[i]), ' hhh')
         sum += matrix[0][i] * derterminant(all_matrix[i]) * ((-1)**i)
-        print(sum)
 
     return sum
 
@@ -38,6 +33,6 @@ def inverse(Matrix):
 
 
 matrix_1 = [[1, 2], [1, 2]]
-matrix = [[1, 2, 3], [0, 4, 5], [1, 0, 6]]
+matrix = [[1, 2, 3, 4], [0, 4, 5, 6], [1, 0, 6, 9], [2, 1, 3, 4]]
 print(derterminant(matrix))
 print(np.linalg.det(matrix))
