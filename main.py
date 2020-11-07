@@ -43,7 +43,7 @@ def inverse(Matrix):
                     matrix_detriminant.append([])
                     for l in range(len(Matrix)):
                         if j != l:
-                            matrix_detriminant[len(matrix_detriminant) - 1].append(Matrix[k][l])
+                            matrix_detriminant[len(matrix_detriminant) - 1].append(Matrix[l][k])
 
             new_matrix[i].append((derterminant(matrix_detriminant) * ((-1) ** (i+j))) / derterminant(Matrix))
 
